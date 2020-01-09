@@ -3,7 +3,7 @@
 ### 安装
 `npm i yjtecvrycas --save`
 
-` import {LoginCheck, LoginAuth, login, logout } from 'yjtecvrycas'`;
+` import {LoginCheck, LoginAuth, login, logout } from 'yjtecvrycas';`
 
 
 ### 方法引用
@@ -11,13 +11,13 @@
 
 ### react组件引用
 
-    class Component extends Component {
+    class MyComponent extends Component {
 		componentDidMount{
 			const {ticket} = this.props;
 		}
     }
  
-    export default LoginCheck(Component);
+    export default LoginCheck(MyComponent);
 
     LoginCheck(Component);
 
