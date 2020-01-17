@@ -18,7 +18,7 @@ export default function LoginCheck(Children) {
     }
 
     async checkLogin() {
-      const uri_ticket = parseUrl["ticket"];
+      const uri_ticket = parseUrl()["ticket"];
       const cookie_ticket = cookie.get("ticket");
       const ticket = uri_ticket || cookie_ticket;
       if (ticket) {
@@ -30,7 +30,6 @@ export default function LoginCheck(Children) {
     }
 
     render() {
-      console.log("render");
       const { ticket, checked } = this.state;
       return checked ? <Children ticket={ticket} {...this.props} /> : null;
     }
