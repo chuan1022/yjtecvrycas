@@ -8,7 +8,7 @@ let casUrl = "http://192.168.1.9:8000";
 console.log(process.env.NODE_ENV);
 
 if (process.env.NODE_ENV == "production") {
-  casUrl = "http://cas.jsvry.com/";
+  casUrl = "http://cas.jsvry.com";
 } else {
   casUrl = "http://192.168.1.9:8000";
 }
@@ -26,5 +26,5 @@ export function login(redirect_uri = default_redirect_uri) {
 export function logout(redirect_uri = default_redirect_uri) {
   cookie.remove(key);
   const params = { redirect_uri };
-  window.location.href = `${casUrl}logout?${stringify(params)}`;
+  window.location.href = `${casUrl}/logout?${stringify(params)}`;
 }
